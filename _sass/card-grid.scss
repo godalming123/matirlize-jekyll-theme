@@ -1,0 +1,33 @@
+// card grid
+.card-container {
+    margin: 0 auto;
+    padding: 0 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+    grid-gap: 0 1.25em;
+    max-width: 1200px;
+  }
+  .card-fetuered {
+    grid-column: span 2;
+  }
+  .card-smalltext {
+    text-transform: uppercase;
+  }
+  .card-image > img {
+    object-fit: cover;
+    height: 100%;
+  }
+  @supports (grid-template-rows: masonry) {
+    .card-container {
+        grid-template-rows: masonry;
+        //align-tracks: stretch;
+    }
+  }
+  //cards themselfs
+  .card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+  }
+  .card-content {
+    grid-column: span 2;
+  }

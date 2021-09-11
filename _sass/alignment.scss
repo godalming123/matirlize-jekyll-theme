@@ -1,0 +1,30 @@
+//alignment 1
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+small,
+li,
+code,
+blockquote,
+.footer-text,
+.alignment-1 {
+  max-width: 500px;
+  margin: 0 auto;
+  width: calc(100% - 10px);
+}
+
+//alignment 2
+img,
+.alignment-2 {
+  text-align: center;
+  margin: auto;
+}
+.alignment-2 > * {
+  text-align: left;
+}
+

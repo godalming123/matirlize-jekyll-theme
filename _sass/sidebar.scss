@@ -1,0 +1,32 @@
+// sidenav and elemnts inside it styles
+.sidenav {
+    text-align: center;
+  }
+  .sidenav-trigger {
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    z-index: 3;
+  }
+  
+  .profile-picture {
+    border-radius: 999px;
+    //if our height is greater then 800px
+    @media (min-height: 800px) {
+        max-width: 250px;
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+    }
+  }
+
+  //sidebar opens
+@media (min-width: 992px) {
+    body {
+      padding-right: 300px;
+    }
+    .sidenav {
+      box-shadow: none;
+      transition: 250ms;
+    }
+  }
