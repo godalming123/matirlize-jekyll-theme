@@ -1,5 +1,5 @@
 ---
-layout: deafualt
+layout: default
 title: home
 barba-page-namespace: home
 ---
