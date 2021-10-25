@@ -30,11 +30,3 @@ document.querySelectorAll(".closeSidenavs").forEach((elem) => {
 })
 //collapsable
 var CollapsableInstances = M.Collapsible.init(document.querySelectorAll('.collapsible'), {});
-//sort buttons
-document.querySelectorAll(".sort-btns > *").forEach(sortButton => {
-  sortButton.onclick = () => {
-    const disabledSortButton = document.querySelector(".sort-btns > .disabled");
-    sortButton.classList.toggle("disabled");
-    disabledSortButton.classList.toggle("disabled");
-  };
-});

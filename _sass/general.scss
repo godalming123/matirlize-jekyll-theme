@@ -1,30 +1,27 @@
-
 html {
-    scroll-behavior: smooth;
-  }
+  scroll-behavior: smooth;
+}
   
-  //an image inside any form of text should be the same size as the text
-  a > img,
-  h1 > img,
-  h2 > img,
-  h3 > img,
-  h4 > img,
-  h5 > img,
-  h6 > img,
-  p > img,
-  .sort-option > img {
-    height: 1em;
-    width: 1em;
-    margin-right: 5px;
-  }
+//an image inside any form of text should be the same size as the text
+a > img,
+h1 > img,
+h2 > img,
+h3 > img,
+h4 > img,
+h5 > img,
+h6 > img,
+p > img {
+  height: 1em;
+  width: 1em;
+  margin-right: 5px;
+}
   
+//fix bad font weight on strong
+strong {
+  font-weight: bold;
+}
   
-  //fix bad font weight on strong
-  strong {
-    font-weight: bold;
-  }
-  
-  //img alt text styles
-  img {
-    font: italic 200 1em Georgia, serif;
-  }
+//img alt text styles
+img {
+  font: italic 200 1em Georgia, serif;
+}
