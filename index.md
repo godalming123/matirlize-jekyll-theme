@@ -1,6 +1,6 @@
 ---
-layout="default"
-title="home"
+layout: default
+title: home
 ---
 
 <div id="home">
