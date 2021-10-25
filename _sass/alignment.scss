@@ -9,9 +9,8 @@ h6,
 strong,
 small,
 li,
-code,
 blockquote,
-.footer-text,
+.language-plaintext, //a code block
 .alignment-1 {
   max-width: 500px;
   margin: 0 auto;
@@ -23,6 +22,7 @@ img,
 .alignment-2 {
   text-align: center;
   margin: auto;
+  max-width: 100%;
 }
 .alignment-2 > * {
   text-align: left;
