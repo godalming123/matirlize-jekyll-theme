@@ -19,7 +19,6 @@
 }
  
 .profile-picture {
-  border-radius: 999px;
   //if our height is greater then 800px
   @media (min-height: 800px) {
     max-width: 250px;
