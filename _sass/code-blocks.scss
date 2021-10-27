@@ -1,3 +1,15 @@
+//styles
+code, pre {
+  font-family:Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
+}
+pre {
+  padding:8px 15px;
+  background: #e3e3e3;
+  border-radius:5px;
+  overflow-x: auto;
+}
+
+//colors
 .highlight table td { padding: 5px; }
 .highlight table pre { margin: 0; }
 .highlight .cm {
@@ -26,11 +38,11 @@
   background-color: #e3d2d2;
 }
 .highlight .gd {
-  color: var(--clr-code-bold-text);
+  color: #000000;
   background-color: #ffdddd;
 }
 .highlight .ge {
-  color: var(--clr-code-bold-text);
+  color: #000000;
   font-style: italic;
 }
 .highlight .gr {
@@ -40,7 +52,7 @@
   color: #999999;
 }
 .highlight .gi {
-  color: var(--clr-code-bold-text);
+  color: #000000;
   background-color: #ddffdd;
 }
 .highlight .go {
@@ -59,23 +71,23 @@
   color: #aa0000;
 }
 .highlight .kc {
-  color: var(--clr-code-bold-text);
+  color: #000000;
   font-weight: bold;
 }
 .highlight .kd {
-  color: var(--clr-code-bold-text);
+  color: #000000;
   font-weight: bold;
 }
 .highlight .kn {
-  color: var(--clr-code-bold-text);
+  color: #000000;
   font-weight: bold;
 }
 .highlight .kp {
-  color: var(--clr-code-bold-text);
+  color: #000000;
   font-weight: bold;
 }
 .highlight .kr {
-  color: var(--clr-code-bold-text);
+  color: #000000;
   font-weight: bold;
 }
 .highlight .kt {
@@ -83,7 +95,7 @@
   font-weight: bold;
 }
 .highlight .k, .highlight .kv {
-  color: var(--clr-code-bold-text);
+  color: #000000;
   font-weight: bold;
 }
 .highlight .mf {
@@ -198,7 +210,7 @@
   font-weight: bold;
 }
 .highlight .o {
-  color: var(--clr-code-bold-text);
+  color: #000000;
   font-weight: bold;
 }
 .highlight .w {
