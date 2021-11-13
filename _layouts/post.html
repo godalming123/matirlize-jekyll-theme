@@ -6,6 +6,9 @@ title: "posts"
 <!-- posts -->
 <small class="display-block">{{ page.date | date: "%-d %B %Y" }}</small>
 <h5>{{ page.type}}</h5>
+{% if page.tags %}
+  <div class="alignment-1"><span class="tag">{{ page.uiTags | join: "</span> <span class="tag">" }}</span></small>
+{% endif %}
 <h1>{{ page.title }}</h1>
 
 <img class="display-block" src="{{page.front-image}}"/>
@@ -16,7 +19,3 @@ title: "posts"
   {% else %}  
     {{content}}
 {% endcase %}
-
-{% if page.tags %}
-  <small class="display-block">tags: <em>{{ page.tags | join: "</em> - <em>" }}</em></small>
-{% endif %}

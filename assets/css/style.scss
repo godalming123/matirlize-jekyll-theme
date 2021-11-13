@@ -1,4 +1,7 @@
 ---
 ---
 
+:root {
+    --accent-clr: {{ page.accent-color }}
+}
 @import "styles.scss";
