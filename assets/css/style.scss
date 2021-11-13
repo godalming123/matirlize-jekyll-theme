@@ -2,6 +2,6 @@
 ---
 
 :root {
-    --accent-clr: {{ page.accent-color }}
+    --accent-clr: {{ site.accent-color }}
 }
 @import "styles.scss";
