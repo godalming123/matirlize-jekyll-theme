@@ -1,8 +1,10 @@
 section {
-    padding: 20px 0px;
-    margin: 20px 0;
-
     &.slight-bg-color-change {
         background: #a9d5fd;
+    }
+
+    &.section-padded {
+        padding: 20px 0px;
+        margin: 20px 0;
     }
 }
