@@ -3,23 +3,26 @@ layout: default
 title: "posts"
 ---
 
-<!-- posts -->
-<small class="display-block">{{ page.date | date: "%-d %B %Y" }}</small>
-<h5>{{ page.type}}</h5>
-{% if page.uiTags %}
-  <div class="alignment-1">
-    {% for uiTag in page.uiTags %}
-      <span class="tag">{{ uiTag }}</span>
-    {% endfor %}
-  </div>
-{% endif %}
-<h1>{{ page.title }}</h1>
+<article>
+  <!-- post -->
+  <small class="display-block">{{ page.date | date: "%-d %B %Y" }}</small>
+  <h5>{{ page.type}}</h5>
+  {% if page.uiTags %}
+    <div class="alignment-1">
+      {% for uiTag in page.uiTags %}
+        <span class="tag">{{ uiTag }}</span>
+      {% endfor %}
+    </div>
+  {% endif %}
+  <h1>{{ page.title }}</h1>
 
-<img class="display-block" src="{{page.front-image}}"/>
+  <img class="display-block" src="{{page.front-image}}"/>
 
-{% case content %}
-  {% when "", nil, false, 0, empty %}
-    <p>This article is still being written.</p>
-  {% else %}  
-    {{content}}
-{% endcase %}
+  {% case content %}
+    {% when "", nil, false, 0, empty %}
+      <p>This article is still being written.</p>
+      
+    {% else %}  
+      {{content}}
+  {% endcase %}
+</article
