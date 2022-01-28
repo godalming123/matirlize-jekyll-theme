@@ -27,10 +27,11 @@
 .card {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
-  &:hover, &:focus {
+  &:hover, &:focus-within, &:focus {
     transform: translateY(-0.3em)
   }
 }
+
 .card-content {
   grid-column: span 2;
 }
