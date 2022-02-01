@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  {% include head.html %}
+
+  <body>
+      <section data-barba="wrapper">
+        <main data-barba="container" data-barba-namespace="{{page.barba-page-namespace}}">
+          {{ content }}
+        </main>
+      </section>
+  </body>
+</html>
