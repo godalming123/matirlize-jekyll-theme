@@ -1,37 +1,7 @@
 const cacheName = "pwa-cache-v2";
 
 const assets = [
-  //pages
-  '/',
-  '/fallback_offline',
-  '/working_on',
-  '/blogs',
-  '/tuturiols',
-  //profile pictures
-  '/profile-pic/180.jpeg',
-  '/profile-pic/266.webp',
-  '/profile-pic/266.png',
-  //icons
-  '/icons/blogger.svg',
-  '/icons/hello.svg',
-  '/icons/home.svg',
-  '/icons/suitcase.svg',
-  //styles
-  '/assets/css/style.css',
-  '/assets/css/colors-light.css',
-  '/assets/css/colors-auto.css',
-  '/assets/css/colors-dark.css',
-  //js
-  '/assets/js/animations/barba.js',
-  '/assets/js/animations/pageFirstLoad.js',
-  '/assets/js/animations/SlideOnVeiwportEnter.js',
-  '/assets/js/main.js',
-  '/assets/js/google-anylytics.js',
-  //js dependencys
-  'https://unpkg.com/@barba/core',
-  'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js',
-  'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js',
-  'https://www.googletagmanager.com/gtag/js?id=G-5LX6PMSFGK'
+  'fallback_offline',
 ];
 
 // install event
@@ -57,11 +27,16 @@ self.addEventListener('activate', evt => {
   );
 });
 
-// fetch event
-self.addEventListener('fetch', evt => {
-  evt.respondWith(
-    caches.match(evt.request).then(
-      cacheResp => cacheResp || fetch(evt.request)
-    ).catch( _ => caches.match('/fallback_offline'))
-  );
-});
+//fetch event
+self.addEventListener('fetch', function(event) {
+    event.respondWith(
+      caches.open(cacheName).then(function(cache) {
+        return cache.match(event.request).then(function (response) {
+          return response || fetch(event.request).then(function(response) {
+            cache.put(event.request, response.clone());
+            return response;
+          });
+        });
+      })
+    );
+  });
