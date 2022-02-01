@@ -7,7 +7,7 @@
   "name": "",
   "short_name": "",
   "description" : "",
-  "icons": {},
+  "icons": [],
   "theme_color": "#{{ site.faded-accent-color }}",
   "background_color": "#{{ site.faded-accent-color }}",
   "start_url": "/",
