@@ -7,18 +7,7 @@
   "name": "",
   "short_name": "",
   "description" : "",
-  "icons": [
-    {
-      "src": "/profile-pic/266.webp",
-      "sizes": "266x266",
-      "type": "image/webp"
-    },
-    {
-      "src": "/profile-pic/180.jpeg",
-      "sizes": "180x180",
-      "type": "image/jpeg"
-    }
-  ],
+  "icons": {},
   "theme_color": "#{{ site.faded-accent-color }}",
   "background_color": "#{{ site.faded-accent-color }}",
   "start_url": "/",
