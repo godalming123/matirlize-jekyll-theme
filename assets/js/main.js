@@ -28,5 +28,9 @@ document.querySelectorAll(".closeSidenavs").forEach((elem) => {
     }
   }
 })
+
 //collapsable
 var CollapsableInstances = M.Collapsible.init(document.querySelectorAll('.collapsible'), {});
+
+// zoomable images
+var ZoomableInstances = M.Materialbox.init(document.querySelectorAll('.materialboxed'), {});
