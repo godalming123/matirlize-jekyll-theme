@@ -28,3 +28,8 @@ img,
   text-align: left;
 }
 
+//the element around the zoomable images should be the same width + heaight as the images as otherwise you get glitchy animations
+.material-placeholder {
+  width: max-content;
+  margin: 0 auto;
+}
