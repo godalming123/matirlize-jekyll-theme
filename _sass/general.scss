@@ -3,14 +3,22 @@ html {
 }
   
 //an image inside any form of text should be the same size as the text
-a > img,
+a  > img,
 h1 > img,
 h2 > img,
 h3 > img,
 h4 > img,
 h5 > img,
 h6 > img,
-p > img {
+p  > img,
+a  > i,
+h1 > i,
+h2 > i,
+h3 > i,
+h4 > i,
+h5 > i,
+h6 > i,
+p  > i {
   height: 1em;
   width: 1em;
   margin-right: 5px;
