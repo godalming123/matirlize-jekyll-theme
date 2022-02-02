@@ -7,7 +7,7 @@
     --sidenav-width: {{ site.sidenav-width }};
 }
 
-{% if site.custom-alignment == true %}
+{% if site.custom-alignment == "true" %}
     @import "alignment.scss";
 {% endif %}
 
