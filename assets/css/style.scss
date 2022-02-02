@@ -8,7 +8,7 @@
 }
 
 {% if site.custom-alignment == true %}
-    @import "alignment"
+    @import "alignment";
 {% endif %}
 
 @import "styles.scss";
