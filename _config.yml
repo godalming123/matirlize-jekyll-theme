@@ -3,3 +3,5 @@ plugins:
 
 accent-color: 26a69a #hex color value
 faded-accent-color: 1d8c81 #hex color value this is used for background when app is launching
+
+sidenav-width: 0px; # set to 300px for a enabled sidebar or 0 to diable the sidebar 

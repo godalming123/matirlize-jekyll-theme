@@ -3,5 +3,7 @@
 
 :root {
     --accent-clr: #{{ site.accent-color }};
+    --sidenav-width: 0px; /* revert width in case sidenav-width is not defined in config*/
+    --sidenav-width: {{ site.sidenav-width }};
 }
 @import "styles.scss";
