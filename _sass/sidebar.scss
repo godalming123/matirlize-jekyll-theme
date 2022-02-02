@@ -25,13 +25,13 @@
 }
 
 .sidenav {
-  width: --sidenav-width;
+  width: var(--sidenav-width);
 }
 
 //sidebar opens
 @media (min-width: 992px) {
   body {
-    padding-right: --sidenav-width;
+    padding-right: var(--sidenav-width);
   }
   .sidenav {
     box-shadow: none;
