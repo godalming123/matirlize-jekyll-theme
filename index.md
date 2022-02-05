@@ -5,7 +5,7 @@ barba-page-namespace: home
 ---
 
 <div id="home"></div>
-# <i class="material-icons">home</i> matirlize-jekyll-theme
+# <i class="material-icons inherit-font-size">home</i> matirlize-jekyll-theme
 A jekyll theme utilizing [The Matirlize Libary](https://materializecss.com/) but with a few improvements such as:
 <ul class="browsser-default">
     <li>sidebars that automatically hide/close depending on device size with a button for smaller devices. See: <a href="#sidebars">sidebars</a></li>
@@ -26,7 +26,7 @@ A jekyll theme utilizing [The Matirlize Libary](https://materializecss.com/) but
 
 
 <div id="installation"></div>
-## <i class="material-icons">file_download</i> Installation
+## <i class="material-icons inherit-font-size">file_download</i> Installation
 ### GH pages
 add this to your ```_config.yml```
 ```
@@ -36,7 +36,7 @@ remote_theme: "godalming123/matirlize-jekyll-theme"
 Just copy other all the files from the `main` branch (except the readme) into you jekyll project and your done! This also works for github pages but you will have to manually update the files.
 
 <div id="docs"></div>
-## <i class="material-icons">insert_drive_file</i> Docs
+## <i class="material-icons inherit-font-size">insert_drive_file</i> Docs
 
 <div id="sections"></div>
 ### Sections
