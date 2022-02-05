@@ -91,7 +91,7 @@ Use:
 _config.yml
 ```
 ```
-custom-alignment: true;
+custom-alignment: true
 ```
 
 <div id="sidebars"></div>
