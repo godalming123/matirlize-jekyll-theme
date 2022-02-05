@@ -1,3 +1,6 @@
+plugins:
+  - jekyll-seo-tag
+
 accent-color: 26a69a #hex color value
 faded-accent-color: 1d8c81 #hex color value this is used for background when app is launching
 
