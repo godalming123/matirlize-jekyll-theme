@@ -7,14 +7,14 @@ barba-page-namespace: home
 <div id="home"></div>
 # matirlize-jekyll-theme
 A jekyll theme utilizing [The Matirlize Libary](https://materializecss.com/) but with a few improvements such as:
-<ul class="browser-default">
-    <li>sidebars that automatically hide/close depending on device size with a button for smaller devices. See: [sidebars](#sidebars)</li>
-    <li>Optional alignment settings. See: [alignment](#alignment)</li>
+<ul class="browsser-default">
+    <li>sidebars that automatically hide/close depending on device size with a button for smaller devices. See: <a href="#sidebars">sidebars</a></li>
+    <li>Optional alignment settings. See: <a href="#alignment">alignment</a></li>
     <li>an improved hover effect on cards with the card clearly rasing on hover (use the `no-hover-effect` class to disable)</li>
-    <li>Divs that can have a link that makes the whole thing clickable. See: [clickable-divs](#divs)</li>
-    <li>Some added footer styles. See: [footers](#footers)</li>
-    <li>added sections styles. See: [sections](#sections)</li>
-    <li>added a tag element. See: [tags](#tags)</li>
+    <li>Divs that can have a link that makes the whole thing clickable. See: <a href="#divs">clickable-divs</a></li>
+    <li>Some added footer styles. See: <a href="#footers">footers</a></li>
+    <li>added sections styles. See: <a href="#sections">sections</a></li>
+    <li>added a tag element. See: <a href="#tags">tags</a></li>
     <li>added a service worker that caches files as they are loaded</li>
     <li>added barba js to animate between pages smoothly</li>
     <li>`img` and `i` elements are now the same size as the text when inside a pargraph</li>
