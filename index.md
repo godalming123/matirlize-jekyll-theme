@@ -7,20 +7,22 @@ barba-page-namespace: home
 <div id="home"></div>
 # matirlize-jekyll-theme
 A jekyll theme utilizing [The Matirlize Libary](https://materializecss.com/) but with a few improvements such as:
-- sidebars that automatically hide/close depending on device size with a button for smaller devices. See: [sidebars](#sidebars)
-- Optional alignment settings. See: [alignment](#alignment)
-- an improved hover effect on cards with the card clearly rasing on hover (use the `no-hover-effect` class to disable)
-- Divs that can have a link that makes the whole thing clickable. See: [clickable-divs](#divs)
-- Some added footer styles. See: [footers](#footers)
-- added sections styles. See: [sections](#sections)
-- added a tag element. See: [tags](#tags)
-- added a service worker that caches files as they are loaded
-- added barba js to animate between pages smoothly
-- `img` and `i` elements are now the same size as the text when inside a pargraph
-- improved contrast on links
-- an added "display-block" helper class
-- an added "circle" helper class to make something a circle
-- an added "center-text helper class to center something's text
+<ul class="browser-default">
+    <li>sidebars that automatically hide/close depending on device size with a button for smaller devices. See: [sidebars](#sidebars)</li>
+    <li>Optional alignment settings. See: [alignment](#alignment)</li>
+    <li>an improved hover effect on cards with the card clearly rasing on hover (use the `no-hover-effect` class to disable)</li>
+    <li>Divs that can have a link that makes the whole thing clickable. See: [clickable-divs](#divs)</li>
+    <li>Some added footer styles. See: [footers](#footers)</li>
+    <li>added sections styles. See: [sections](#sections)</li>
+    <li>added a tag element. See: [tags](#tags)</li>
+    <li>added a service worker that caches files as they are loaded</li>
+    <li>added barba js to animate between pages smoothly</li>
+    <li>`img` and `i` elements are now the same size as the text when inside a pargraph</li>
+    <li>improved contrast on links</li>
+    <li>an added "display-block" helper class</li>
+    <li>an added "circle" helper class to make something a circle</li>
+    <li>an added "center-text helper class to center something's text</li>
+</ul>
 
 
 <div id="installation"></div>
