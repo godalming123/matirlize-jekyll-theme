@@ -21,6 +21,7 @@ h6 > i,
 p  > i {
   height: 1em;
   width: 1em;
+  font-size: inherit;// make the icon/img inside the text inherit the font size so em properly sizes it
   margin-right: 5px;
 }
   
