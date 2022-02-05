@@ -7,7 +7,7 @@ barba-page-namespace: home
 <div id="home"></div>
 # <i class="material-icons inherit-font-size">home</i> matirlize-jekyll-theme
 A jekyll theme utilizing [The Matirlize Libary](https://materializecss.com/) but with a few improvements such as:
-<ul class="browsser-default">
+<ul class="browser-default">
     <li>sidebars that automatically hide/close depending on device size with a button for smaller devices. See: <a href="#sidebars">sidebars</a></li>
     <li>Optional alignment settings. See: <a href="#alignment">alignment</a></li>
     <li>an improved hover effect on cards with the card clearly rasing on hover (use the `no-hover-effect` class to disable)</li>
