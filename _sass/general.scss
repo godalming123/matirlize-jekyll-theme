@@ -25,7 +25,7 @@ p  > i {
 }
 
 .inherit-font-size {
-  font-size: inherit;
+  font-size: inherit !important;
 }
   
 //fix bad font weight on strong
