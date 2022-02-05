@@ -45,6 +45,8 @@ I have added custom sections EG:
 <section class="section-padded">
     a section
 </section>
+```
+```html
 <section class="section-padded slight-bg-color-change">
     another section section with a defferent color
     <button clas="btn waves-light">a button</button>
