@@ -32,6 +32,9 @@
       transform: translateY(-0.3em)
     }
   }
+  &.no-hover-effect {
+    cursor: not-allowed;// mark as not clickable
+  }
 }
 
 .card-content {
