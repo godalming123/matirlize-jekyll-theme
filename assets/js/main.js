@@ -59,6 +59,11 @@ function initliseZoomableImages () {
   zoomableElementInstances.forEach(markAsInitialised);                     // mark them as initialised
 }
 
-initialiseSidebars()
-initiliseCollapsables()
-initliseZoomableImages()
+//initlise components
+function initliseCompoents () {
+  initialiseSidebars()
+  initiliseCollapsables()
+  initliseZoomableImages()
+}
+
+initliseCompoents()
