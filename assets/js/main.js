@@ -17,20 +17,48 @@ if ('serviceWorker' in navigator) {
 
 //ui
 
+function getUninitialised(cssSelection) {
+  return document.querySelectorAll(cssSelection + ":not(.initialised)")
+}
+function markAsInitialised(element) {
+  element.classList.add("initialised")
+}
+
 //side bar
-var SidebarInstances = M.Sidenav.init(document.querySelectorAll('.sidenav'), {"edge": "right"});
-document.querySelectorAll(".closeSidenavs").forEach((elem) => {
-  elem.onclick = () => {
-    if (!BiggerThen991()) {
-      for ( let _ = 0; _ <= SidebarInstances.length ; _++ ) {
-        SidebarInstances[_].close();
+function initialiseSidebars () {
+  // initlise sidebar
+  var SidebarInstances = getUninitialised(".sidenav");// get all the unintilised sidebars
+  var MatirliseSidebarInstances = M.Sidenav.init(SidebarInstances, {"edge": "right"});// initialise them
+  SidebarInstances.forEach(markAsInitialised);        // mark them as initialised
+  
+  //initlise sidebar close buttons
+  var sidebarCloseBtns = getUninitialised(".closeSidenavs");// get all the unintilised sidebar close buttons
+  sidebarCloseBtns.forEach((elem) => {
+    elem.onclick = () => {// add there onclick event to close the sidebar
+      if (!BiggerThen991()) {
+        for ( let _ = 0; _ <= MatirliseSidebarInstances.length ; _++ ) {
+          MatirliseSidebarInstances[_].close();
+        }
       }
     }
-  }
-})
+    markAsInitialised(elem)// mark the elem as initilised
+  })
+}
 
 //collapsable
-var CollapsableInstances = M.Collapsible.init(document.querySelectorAll('.collapsible'), {});
+function initiliseCollapsables () {
+  var collapsableElementInstances = getUninitialised(".collapsible");             // get all the unintilised collapsables
+  var CollapsableInstances = M.Collapsible.init(collapsableElementInstances), {});// initialise them
+  collapsableElementInstances.forEach(markAsInitialised);                         // mark them as initialised
+}
 
 // zoomable images
-var ZoomableInstances = M.Materialbox.init(document.querySelectorAll('.materialboxed'), {});
+function initliseZoomableImages () {
+  var zoomableElementInstances = getUninitialised(".materialboxed");       // get all the unintilised zoomable images
+  var ZoomableInstances = M.Materialbox.init(zoomableElementInstances, {});// initialise them
+  zoomableElementInstances.forEach(markAsInitialised);                     // mark them as initialised
+}
+
+initialiseSidebars()
+initiliseCollapsables()
+initliseZoomableImages()
