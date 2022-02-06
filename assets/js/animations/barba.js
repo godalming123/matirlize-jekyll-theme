@@ -1,4 +1,5 @@
 //import {addScrollTrigger} from './SlideOnVeiwportEnter.js';
+import initliseCompoents from '../main.js'
 
 barba.init({
   transitions: [
@@ -22,7 +23,10 @@ barba.init({
           opacity: 0,
           x: 10,
           duration: 0.4
-        })
+        }),
+        afterEnter: (data) => {
+          initliseCompoents()
+        },
     },//from
     {
       to: {namespace: "home"},
@@ -44,7 +48,10 @@ barba.init({
           opacity: 0,
           x: -10,
           duration: 0.4
-        })
+        }),
+        afterEnter: (data) => {//initialise all our components
+          initliseCompoents()
+        },
     },//to
     
     //other transitions

@@ -60,7 +60,7 @@ function initliseZoomableImages () {
 }
 
 //initlise components
-function initliseCompoents () {
+export default function initliseCompoents () {
   initialiseSidebars()
   initiliseCollapsables()
   initliseZoomableImages()
