@@ -1,4 +1,4 @@
-//import {addScrollTrigger} from './SlideOnVeiwportEnter.js';
+import barba from '@barba/core';
 import initliseCompoents from '../main.js'
 
 barba.init({
