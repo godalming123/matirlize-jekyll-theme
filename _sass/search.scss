@@ -33,5 +33,6 @@ main[data-barba="container"] {// the barba main elemnt
 .app-searchbar:focus-within {
     & + main[data-barba="container"] {// the barba main elemnt that is after a focused serach bar
         opacity: 0.05;//make it barely visible so you can search
+        pointer-events: none;//stop you from clicking on the items
     }
 }
