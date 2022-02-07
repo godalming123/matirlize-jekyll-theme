@@ -1,0 +1,35 @@
+.app-searchbar {
+    //size
+    width: 600px;
+    max-width: calc(100% - 5px);
+
+    // position + animation
+    position: fixed;
+    margin: 0 auto;
+    transition: transform 300ms;
+    --y-trans: -130%;
+
+    //ontop
+    z-index: 10;
+
+    //focus effect
+    &:focus, &:focus-within {
+        --y-trans: 0;
+    }
+}
+
+@media (max-width: 991px) {
+    .app-searchbar {
+        --x-trans: calc(var(--sidenav-width) * -0.5)//when the sidebar s showing we want to move the searchbar so it is not covered by the sidebar
+    }
+}
+
+main[data-barba="container"] {// the barba main elemnt
+    transition: opacity 200ms;
+}
+
+.app-searchbar:focus-within {
+    & + main[data-barba="container"] {// the barba main elemnt that is after a focused serach bar
+        opacity: 0.05;//make it barely visible so you can search
+    }
+}

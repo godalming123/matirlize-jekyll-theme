@@ -49,3 +49,7 @@ border-radius: 999px;
 a {
   color: #0074ad;
 }
+
+* {
+  transform: translateX(var(--x-trans)) translateY(var(--y-trans));
+}
