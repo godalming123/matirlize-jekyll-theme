@@ -6,6 +6,8 @@
     // position + animation
     position: fixed;
     margin: 0 auto;
+    left: 0;
+    right: 0;// css needs this for margin auto to work with position sticky becuase it a weirdo
     transition: transform 300ms;
     --y-trans: -130%;
 
@@ -14,7 +16,7 @@
 
     //focus effect
     &:focus, &:focus-within {
-        --y-trans: 0;
+        --y-trans: 10px;
     }
 }
 

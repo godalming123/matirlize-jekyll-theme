@@ -51,5 +51,7 @@ a {
 }
 
 * {
+  --y-trans: 0;
+  --x-trans: 0;//in case you set one variable but not the other the whole statement becomes invalid and doesnt work
   transform: translateX(var(--x-trans)) translateY(var(--y-trans));
 }
