@@ -5,8 +5,10 @@
   <body>
       {% include navbar.html  %}
       {% include sidebar.html %}
+      {% include in-body.html %}
 
       <section data-barba="wrapper">
+        {% include in-barba-section.html %}
         <main data-barba="container" data-barba-namespace="{{page.barba-page-namespace}}">
           {{ content }}
           {% include footer.html %}
