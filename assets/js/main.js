@@ -47,9 +47,9 @@ function initialiseSidebars () {
 
 //collapsable
 function initiliseCollapsables () {
-  let collapsableElementInstances = getUninitialised(".collapsible");             // get all the unintilised collapsables
-  let CollapsableInstances = M.Collapsible.init(collapsableElementInstances), {});// initialise them
-  collapsableElementInstances.forEach(markAsInitialised);                         // mark them as initialised
+  let collapsableElementInstances = getUninitialised(".collapsible");                            // get all the unintilised collapsables
+  let CollapsableInstances = M.Collapsible.init(collapsableElementInstances, {}); // initialise them
+  collapsableElementInstances.forEach(markAsInitialised);                                             // mark them as initialised
 }
 
 // zoomable images
