@@ -27,12 +27,12 @@ function markAsInitialised(element) {
 //side bar
 function initialiseSidebars () {
   // initlise sidebar
-  var SidebarInstances = getUninitialised(".sidenav");// get all the unintilised sidebars
-  var MatirliseSidebarInstances = M.Sidenav.init(SidebarInstances, {"edge": "right"});// initialise them
+  let SidebarInstances = getUninitialised(".sidenav");// get all the unintilised sidebars
+  let MatirliseSidebarInstances = M.Sidenav.init(SidebarInstances, {"edge": "right"});// initialise them
   SidebarInstances.forEach(markAsInitialised);        // mark them as initialised
   
   //initlise sidebar close buttons
-  var sidebarCloseBtns = getUninitialised(".closeSidenavs");// get all the unintilised sidebar close buttons
+  let sidebarCloseBtns = getUninitialised(".closeSidenavs");// get all the unintilised sidebar close buttons
   sidebarCloseBtns.forEach((elem) => {
     elem.onclick = () => {// add there onclick event to close the sidebar
       if (!BiggerThen991()) {
@@ -47,23 +47,23 @@ function initialiseSidebars () {
 
 //collapsable
 function initiliseCollapsables () {
-  var collapsableElementInstances = getUninitialised(".collapsible");             // get all the unintilised collapsables
-  var CollapsableInstances = M.Collapsible.init(collapsableElementInstances), {});// initialise them
+  let collapsableElementInstances = getUninitialised(".collapsible");             // get all the unintilised collapsables
+  let CollapsableInstances = M.Collapsible.init(collapsableElementInstances), {});// initialise them
   collapsableElementInstances.forEach(markAsInitialised);                         // mark them as initialised
 }
 
 // zoomable images
 function initliseZoomableImages () {
-  var zoomableElementInstances = getUninitialised(".materialboxed");       // get all the unintilised zoomable images
-  var ZoomableInstances = M.Materialbox.init(zoomableElementInstances, {});// initialise them
-  zoomableElementInstances.forEach(markAsInitialised);                     // mark them as initialised
+  let zoomableElementInstances = getUninitialised(".materialboxed");                  // get all the unintilised zoomable images
+  let ZoomableInstances = M.Materialbox.init(zoomableElementInstances, {}); // initialise them
+  zoomableElementInstances.forEach(markAsInitialised);                                          // mark them as initialised
 }
 
 //initlise components
 export default function initliseCompoents () {
-  initialiseSidebars()
-  initiliseCollapsables()
-  initliseZoomableImages()
+  initialiseSidebars();
+  initiliseCollapsables();
+  initliseZoomableImages();
 }
 
 initliseCompoents()
