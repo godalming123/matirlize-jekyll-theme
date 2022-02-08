@@ -1,4 +1,3 @@
-import barba from '@barba/core';
 import initliseCompoents from '../main.js'
 
 barba.init({
