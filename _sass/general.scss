@@ -50,7 +50,7 @@ a {
   color: #0074ad;
 }
 
-* {
+*:not(body) {
   --y-trans: 0;
   --x-trans: 0;//in case you set one variable but not the other the whole statement becomes invalid and doesnt work
   transform: translateX(var(--x-trans)) translateY(var(--y-trans));
