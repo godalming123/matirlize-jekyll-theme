@@ -7,7 +7,6 @@ barba.init({
       from: {namespace: "home"},
       leave: (data) =>
         gsap.to(data.current.container, {
-          opacity: 0,
           x: -10,
           duration: 0.4
         }),
@@ -19,7 +18,6 @@ barba.init({
         }),
       enter: (data) =>
         gsap.from(data.next.container, {
-          opacity: 0,
           x: 10,
           duration: 0.4
         }),
@@ -32,7 +30,6 @@ barba.init({
       //sync: true,
       leave: (data) =>
         gsap.to(data.current.container, {
-          opacity: 0,
           x: 10,
           duration: 0.4
         }),
@@ -44,7 +41,6 @@ barba.init({
         }),
       enter: (data) =>
         gsap.from(data.next.container, {
-          opacity: 0,
           x: -10,
           duration: 0.4
         }),
