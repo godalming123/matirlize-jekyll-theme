@@ -1,7 +1,10 @@
-const cacheName = "pwa-cache-v2";
+---
+---
+
+const cacheName = "pwa-cache-v3";
 
 const assets = [
-  'fallback_offline',
+  '{{ "/fallback_offline" | relative_url }}',
 ];
 
 // install event
@@ -27,16 +30,24 @@ self.addEventListener('activate', evt => {
   );
 });
 
+const getFromCache = (cache, request, fallback) =>
+  cache.match(request).then((response) => response || fallback)
+
+const loadAndAddToCache = (request, cache) =>
+  fetch(request).then((response) => {
+    cache.put(request, response.clone());//add the response to the cache
+    return response || getFromCache(cache, '{{ "/fallback_offline" | relative_url }}', "We really are'nt able to get that right now!") ;//return the response or the fallback offline page if that returns a 404 or a last resort error text if that fails
+  });
+
+const loadFromCache = (request, cache) =>
+  getFromCache(cache, request, loadAndAddToCache(event, cache))//return the reponse from the cache or the fetch page if it is not in the cache
+
+const loadData = (request) =>
+  caches.open(cacheName).then( (cache) => loadFromCache(request, cache) )
+
 //fetch event
 self.addEventListener('fetch', function(event) {
-    event.respondWith(
-      caches.open(cacheName).then(function(cache) {
-        return cache.match(event.request).then(function (response) {
-          return response || fetch(event.request).then(function(response) {
-            cache.put(event.request, response.clone());
-            return response;
-          });
-        });
-      })
-    );
-  });
+  event.respondWith(
+    loadData(event.request)
+  );
+});
