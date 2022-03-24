@@ -1,6 +1,8 @@
 ---
 ---
 
+// you can overide these properties by creating your own manifest.json in the root directoty of your site
+
 {
   "lang": "en",
   "dir": "ltr",
