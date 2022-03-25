@@ -1,3 +1,6 @@
+---
+---
+
 // width functions
 function getWidth(){
   return window.innerWidth
@@ -10,7 +13,7 @@ function BiggerThen991() {
 //register service worker
 
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js')
+    navigator.serviceWorker.register('{{ "/sw.js" | relative_url }}')
     .then (reg => {console.info ('Service Worker registration successfull:', reg);})
     .catch(err => {console.error('Service Worker registration failed:',      err);});
   };
