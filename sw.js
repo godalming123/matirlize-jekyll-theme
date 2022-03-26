@@ -31,19 +31,16 @@ self.addEventListener('activate', evt => {
 });
 
 const getFromCaches = (request, fallback) =>
-  caches.match(request).then((response) => response).catch(() => fallback)
+  caches.match(request).then((response) => response).catch((respone) => fallback)// get the content from the cache and catch with the fallback upon failure
 
-const loadAndAddToCache = (request, cache) =>
+const loadAndAddToCache = (request) =>
   fetch(request).then((response) => {
-    cache.put(request, response.clone());//add the response to the cache
+    caches.open(cacheName).then( (cache) => cache.put(request, response.clone()));//add the response to the cache
     return response;//return the response (will use catch to return a fallback if it fails)
   }).catch(() => getFromCaches('{{ "/fallback_offline" | relative_url }}', "We really are'nt able to get that right now!"));//return the fallback offline page if that returns a 404 or a last resort error text if that fails
 
-const loadFromCache = (request, cache) =>
-  getFromCaches(request, loadAndAddToCache(request, cache))//return the reponse from the cache or the fetch page if it is not in the cache
-
 const loadData = (request) =>
-  caches.open(cacheName).then( (cache) => loadFromCache(request, cache) )
+  getFromCaches(request, loadAndAddToCache(request))// look in all our caches for the response and load + add to cache as a fallback
 
 //fetch event
 self.addEventListener('fetch', function(event) {
