@@ -1,6 +1,7 @@
 import initliseCompoents from '../main.js'
 
 barba.init({
+  cacheIgnore: true, //since we use a sevice worker barba should not cache pages
   transitions: [
     //home transitions
     {

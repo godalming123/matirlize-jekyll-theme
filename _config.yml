@@ -1,3 +1,5 @@
+version: 1 # allow to specify the version of the code this is useful so service workers recache the new files
+
 plugins:
   - jekyll-seo-tag
 
