@@ -6,14 +6,75 @@
 {
   "lang": "en",
   "dir": "ltr",
-  "name": "",
-  "short_name": "",
-  "description" : "",
-  "icons": [],
+  "name": "{{ site.title }}",
+  "short_name": "{{ site.short_title }}",
+  "description" : "{{ site.description }}",
+  "icons": [
+    {
+      "src": "{{ "icons/siteicons/512x512.png" | relative_url}}",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "{{ "icons/siteicons/266x266.png" | relative_url}}",
+      "sizes": "266x266",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "{{ "icons/siteicons/192x192.png" | relative_url}}",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "{{ "icons/siteicons/180x180.png" | relative_url}}",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "{{ "icons/siteicons/168x168.png" | relative_url}}",
+      "sizes": "168x168",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "{{ "icons/siteicons/144x144.png" | relative_url}}",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "{{ "icons/siteicons/96x96.png" | relative_url}}",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "{{ "icons/siteicons/80x80.png" | relative_url}}",
+      "sizes": "80x80",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "{{ "icons/siteicons/72x72.png" | relative_url}}",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "{{ "icons/siteicons/48x48.png",  | relative_url}}",
+      "sizes": "48x48",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
   "theme_color": "#{{ site.faded-accent-color }}",
   "background_color": "#{{ site.faded-accent-color }}",
   "start_url": "{{ "/" | relative_url}}",
-  "scope": "{{ "/" | relative_url}}",
+  "scope" : "{{ "/" | relative_url}}",
   "display": "standalone",
   "orientation": "natural"
 }
