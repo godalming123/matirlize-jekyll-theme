@@ -119,3 +119,24 @@ sidenav-width: 300px;
 ```
 
 If you use this code and just modify the iteme in the ul we will take care of the rest including hiding it n mobile and adding a button and swipe gestures and so on. Also note you can use the `closeSidenavs` class on any element in the sidebar which will make it close all open sidenavs when it is clicked.
+
+<div id="pwa"></div>
+
+### Web app usage (PWA)
+To use this theme with a webapp please specify
+
+```
+_config.yml
+```
+
+```yaml
+title: "some title"
+short_title: " a slightly shorter title"
+description: "a description of the app"
+accent-color: 26a69a #hex color value
+faded-accent-color: 1d8c81 #hex color value this is used for background when app is launching
+```
+Ounce you have done this add the following files:
+- site
+    - siteicons
+        - 48x48.png
