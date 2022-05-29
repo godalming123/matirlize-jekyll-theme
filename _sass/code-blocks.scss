@@ -1,12 +1,12 @@
 /*
-= SINGLE LINE CODE BLOCKS STRUCTURE =
+=== SINGLE LINE CODE BLOCKS STRUCTURE ===
  - code
  | - span.nt "part of code"
  | - span.o "code part 2"
  | - span.err "part code number 3"
  | - span.nt "text"
 
-= MULTILINE CODE BLOCKS STRUCTURE =
+=== MULTILINE CODE BLOCKS STRUCTURE ===
  - .highlight-rough.language-plaintext
  | - .highlight
  | | - pre.highlight
@@ -15,6 +15,26 @@
  | | | | - span.o "code part 2"
  | | | | - span.err "part code number 3"
  | | | | - span.nt "text"
+
+              = OR =
+
+ - .highlight-rough.language-plaintext
+ | - tbody
+ | | - tr
+ | | | - td.rouge-gutter gl
+ | | | | - pre.lineno
+ | | | | | - 1
+ | | | | | - 2
+ | | | | | - 3
+ | | | | | - 4
+ | | | | | - 5
+ | | | - td.rouge-cdoe
+ | | | | - pre
+ | | | | | - span.nt "part of code"
+ | | | | | - span.o "code part 2"
+ | | | | | - span.err "part code number 3"
+ | | | | | - span.nt "text"
+
 */
 
 code {
@@ -42,26 +62,28 @@ pre.highlight > code {
 }
 
 //colors
-$foreground-dimmed: transparentize($foreground, 0.7);
 
-$syntax-red: #e65c5c;
-$syntax-orange: #e6955c;
-$syntax-yellow: #e6da5c;
-$syntax-green: #5ce65c;
-$syntax-cyan: #5ce6e6;
-$syntax-blue: #5c8ae6;
-$syntax-purple: #835ce6;
-$syntax-pink: #e65ce6;
 
 code {
-  .go { color: $foreground-dimmed; }
-  .gd, .err { color: $syntax-red; }
-  .k, .o, .cp, .kc, .kn, .kp, .kr, .nt, .ow { color: $syntax-orange; }
-  .na, .nc, .nf, .fm { color: $syntax-yellow; }
-  .hll, .s, .sa, .sb, .sc, .dl, .sd, .s2, .se, .sh, .si, .sx, .sr, .s1, .ss { color: $syntax-green; }
-  .m, .mb, .mf, .mh, .mi, .mo, .il { color: $syntax-cyan; }
-  .c, .ch, .cm, .cpf, .c1, .cs { color: $syntax-blue; }
-  .n + .p + .n, .kd, .kt, .nb, .nl, .nv, .vc, .vg, .vi, .vm { color: $syntax-purple; }
+  --foreground-dimmed: rgba(0, 0, 0, 0.75);
+
+  --syntax-red: #e65c5c;
+  --syntax-orange: #e6955c;
+  --syntax-yellow: #e6da5c;
+  --syntax-green: #5ce65c;
+  --syntax-cyan: #5ce6e6;
+  --syntax-blue: #5c8ae6;
+  --syntax-purple: #835ce6;
+  --syntax-pink: #e65ce6;
+
+  .go { color: var(foreground-dimmed); }
+  .gd, .err { color: var(syntax-red); }
+  .k, .o, .cp, .kc, .kn, .kp, .kr, .nt, .ow { color: var(syntax-orange); }
+  .na, .nc, .nf, .fm { color: var(syntax-yellow); }
+  .hll, .s, .sa, .sb, .sc, .dl, .sd, .s2, .se, .sh, .si, .sx, .sr, .s1, .ss { color: var(syntax-green); }
+  .m, .mb, .mf, .mh, .mi, .mo, .il { color: var(syntax-cyan); }
+  .c, .ch, .cm, .cpf, .c1, .cs { color: var(syntax-blue); }
+  .n + .p + .n, .kd, .kt, .nb, .nl, .nv, .vc, .vg, .vi, .vm { color: var(syntax-purple); }
   .kd, .nb, .nl, .nv, .vc, .vg, .vi, .vm { font-style: italic; }
   .gh, .gi, .gu { font-weight: bold; }
   .ge { text-decoration: underline; }

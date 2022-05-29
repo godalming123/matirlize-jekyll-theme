@@ -8,3 +8,11 @@ faded-accent-color: 1d8c81 #hex color value this is used for background when app
 
 sidenav-width: 300px # set to 300px for a enabled sidebar or 0 to diable the sidebar
 custom-alignment: true # weather to use the custom alignment styles
+
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    #line_numbers: table
+    wrap: false
+    span:
+      line_numbers: false
