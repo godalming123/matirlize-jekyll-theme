@@ -39,14 +39,15 @@
 
 code {
   font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
-  padding: 8px 15px;
   background: #e3e3e3;
   border-radius: 5px;
+  padding: 2px;
 }
 
 pre.highlight > code {
   display: block;
   overflow-x: auto;
+  padding: 8px 15px;
 
   &::after {
     content: attr(language);
@@ -67,23 +68,23 @@ pre.highlight > code {
 code {
   --foreground-dimmed: rgba(0, 0, 0, 0.75);
 
-  --syntax-red: #e65c5c;
-  --syntax-orange: #e6955c;
-  --syntax-yellow: #e6da5c;
-  --syntax-green: #5ce65c;
-  --syntax-cyan: #5ce6e6;
-  --syntax-blue: #5c8ae6;
-  --syntax-purple: #835ce6;
-  --syntax-pink: #e65ce6;
+  --syntax-red: hsl(0, 100%, 30%);
+  --syntax-orange: hsl(25, 100%, 30%);
+  --syntax-yellow: hsl(55, 100%, 30%);
+  --syntax-green: hsl(120, 100%, 30%);
+  --syntax-cyan: hsl(180, 100%, 30%);
+  --syntax-blue: hsl(220, 100%, 30%);
+  --syntax-purple: hsl(257, 100%, 30%);
+  --syntax-pink: hsl(300, 100%, 30%);
 
-  .go { color: var(foreground-dimmed); }
-  .gd, .err { color: var(syntax-red); }
-  .k, .o, .cp, .kc, .kn, .kp, .kr, .nt, .ow { color: var(syntax-orange); }
-  .na, .nc, .nf, .fm { color: var(syntax-yellow); }
-  .hll, .s, .sa, .sb, .sc, .dl, .sd, .s2, .se, .sh, .si, .sx, .sr, .s1, .ss { color: var(syntax-green); }
-  .m, .mb, .mf, .mh, .mi, .mo, .il { color: var(syntax-cyan); }
-  .c, .ch, .cm, .cpf, .c1, .cs { color: var(syntax-blue); }
-  .n + .p + .n, .kd, .kt, .nb, .nl, .nv, .vc, .vg, .vi, .vm { color: var(syntax-purple); }
+  .go { color: var(--foreground-dimmed); }
+  .gd, .err { color: var(--syntax-red); }
+  .k, .o, .cp, .kc, .kn, .kp, .kr, .nt, .ow { color: var(--syntax-orange); }
+  .na, .nc, .nf, .fm { color: var(--syntax-yellow); }
+  .hll, .s, .sa, .sb, .sc, .dl, .sd, .s2, .se, .sh, .si, .sx, .sr, .s1, .ss { color: var(--syntax-green); }
+  .m, .mb, .mf, .mh, .mi, .mo, .il { color: var(--syntax-cyan); }
+  .c, .ch, .cm, .cpf, .c1, .cs { color: var(--syntax-blue); }
+  .n + .p + .n, .kd, .kt, .nb, .nl, .nv, .vc, .vg, .vi, .vm { color: var(--syntax-purple); }
   .kd, .nb, .nl, .nv, .vc, .vg, .vi, .vm { font-style: italic; }
   .gh, .gi, .gu { font-weight: bold; }
   .ge { text-decoration: underline; }
