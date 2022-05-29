@@ -23,7 +23,8 @@ barba.init({
           duration: 0.4
         }),
         afterEnter: (data) => {
-          initliseCompoents()
+          initliseCompoents();
+          data.next.container.removeAttribute("style");// jsap add's transform inline style this breaks materialbox as it adds another stacking context
         },
     },//from
     {
@@ -47,6 +48,7 @@ barba.init({
         }),
         afterEnter: (data) => {//initialise all our components
           initliseCompoents()
+          data.next.container.removeAttribute("style");// jsap add's transform inline style this breaks materialbox as it adds another stacking context
         },
     },//to
     
