@@ -7,7 +7,7 @@
  | - span.nt "text"
 
 === MULTILINE CODE BLOCKS STRUCTURE ===
- - .highlight-rough.language-plaintext
+ - .highlighter-rouge.language-plaintext
  | - .highlight
  | | - pre.highlight
  | | | - code
@@ -18,7 +18,7 @@
 
               = OR =
 
- - .highlight-rough.language-plaintext
+ - .highlighter-rouge.language-plaintext
  | - tbody
  | | - tr
  | | | - td.rouge-gutter gl
@@ -48,18 +48,18 @@ pre.highlight > code {
   display: block;
   overflow-x: auto;
   padding: 8px 15px;
+}
 
-  &::after {
-    content: attr(language);
-    text-transform: uppercase;
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 1.5em;
-    color: rgba(240, 240, 240, 0.3);
-    font-size: 0.8em;
-    line-height: 0.8em;
-  }
+.highlighter-rouge::after {
+  content: attr(language);
+  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1.5em;
+  color: rgba(240, 240, 240, 0.3);
+  font-size: 0.8em;
+  line-height: 0.8em;
 }
 
 //colors
